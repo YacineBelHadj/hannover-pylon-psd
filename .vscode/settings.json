@@ -1,0 +1,9 @@
+{
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#1E90FF",
+        "titleBar.activeForeground": "#FFFFFF",
+        "titleBar.inactiveBackground": "#1E90FF99",
+        "titleBar.inactiveForeground": "#FFFFFF99"
+    },
+    "dbcode.connections": []
+}

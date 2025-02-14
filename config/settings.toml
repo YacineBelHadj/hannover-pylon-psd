@@ -1,0 +1,5 @@
+[PATH]
+raw='/media/owilab/EXTERNAL_USB'
+processed= '@format /{env[HOME]}/data/processed'
+mlflow='@format /{env[HOME]}/logs/mlflow'
+    

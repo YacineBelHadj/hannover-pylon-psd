@@ -1,0 +1,13 @@
+.venv
+__pycache__
+*.pyc
+# Ignore dynaconf secret files
+.secrets.*
+.config
+logs/*
+.cache/*
+*.ckpt
+lightning_logs/*
+mlruns/*
+*.db
+*.sqbpro
