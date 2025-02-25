@@ -6,7 +6,7 @@ import numpy as np
 
 class CutPSD(nn.Module):
     def __init__(self, freq_axis:torch.Tensor | np.ndarray, freq_range:tuple[int, int]):
-        super(CutPSD, self).__init__()
+        super().__init__()
         self.freq_axis = freq_axis  
         self.freq_range = freq_range
         self.freq_mask = (self.freq_axis >= self.freq_range[0]) & (self.freq_axis <= self.freq_range[1])
@@ -16,7 +16,7 @@ class CutPSD(nn.Module):
     
 class FromBuffer(nn.Module):
     def __init__(self, dtype=np.float32):
-        super(FromBuffer, self).__init__()
+        super().__init__()
         self.dtype = dtype
 
     def forward(self, buffer):
@@ -54,7 +54,7 @@ class LevelEncoder(nn.Module):
     
 class NormLayer(nn.Module):
     def __init__(self, max_val, min_val, denormalize=False):
-        super(NormLayer, self).__init__()
+        super().__init__()
         self.register_buffer('max', self._to_tensor(max_val))
         self.register_buffer('min', self._to_tensor(min_val))
         self.denormalize = denormalize
@@ -116,6 +116,8 @@ def build_layers(hidden_dims, activation_list=None, batch_norm=False, dropout_ra
     layers = []
     if not isinstance(activation_list, list):
         activation_list = [activation_list] * (len(hidden_dims) - 1)
+    if isinstance(activation_list, list):
+        assert len(activation_list) == len(hidden_dims) - 1, "activation_list must have len(hidden_dims) - 1"
 
     if norm_layer:
         assert norm_layer_location in ['pre', 'post'], "norm_layer_location must be 'pre' or 'post'"

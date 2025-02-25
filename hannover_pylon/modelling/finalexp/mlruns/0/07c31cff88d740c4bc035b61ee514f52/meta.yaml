@@ -1,0 +1,15 @@
+artifact_uri: file:///home/owilab/Documents/YacineB/Code/hannover-pylon/hannover_pylon/modelling/finalexp/mlruns/0/07c31cff88d740c4bc035b61ee514f52/artifacts
+end_time: 1739970549733
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 07c31cff88d740c4bc035b61ee514f52
+run_name: useful-duck-91
+run_uuid: 07c31cff88d740c4bc035b61ee514f52
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739970549728
+status: 4
+tags: []
+user_id: owilab
